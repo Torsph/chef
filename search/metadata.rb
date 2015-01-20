@@ -9,4 +9,10 @@ version          '0.1.0'
 depends 'apt'
 depends 'java'
 depends 'monit'
+
+depends 'runit'
+depends 'ohai'
+depends 'build-essential'
+
+depends 'nginx'
 depends 'elasticsearch'
