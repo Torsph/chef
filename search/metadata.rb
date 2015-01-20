@@ -6,3 +6,7 @@ description      'Installs/Configures search'
 long_description 'Installs/Configures search'
 version          '0.1.0'
 
+depends 'apt'
+depends 'java'
+depends 'monit'
+depends 'elasticsearch'
