@@ -7,11 +7,14 @@ default['elasticsearch']['cluster']['name'] = 'pelp-search'
 default['elasticsearch']['discovery']['type'] = 'ec2'
 default['elasticsearch']['discovery']['zen']['minimum_master_nodes'] = '1'
 default['elasticsearch']['discovery']['ping']['multicast']['enabled'] = 'false'
-default['elasticsearch']['discovery']['ec2']['groups'] = 'elasticsearch'
+default['elasticsearch']['discovery']['ec2']['groups'] = ['pelp-search']
 
 default['elasticsearch']['elasticsearch']['Type'] = 'AWS::EC2::SecurityGroup'
 default['elasticsearch']['elasticsearch']['Properties']['GroupDescription'] = 'so that ES cluster can find other nodes'
 default['elasticsearch']['cloud']['aws']['region'] = 'eu-west'
+
+
+
 
 default['elasticsearch']['nginx']['ssl']['cert_file'] = nil
 default['elasticsearch']['nginx']['ssl']['key_file'] = nil
