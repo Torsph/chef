@@ -6,8 +6,8 @@ default['java']['oracle']['accept_oracle_download_terms'] = 'true'
 default['elasticsearch']['cloud']['aws']['region'] = 'eu-west'
 default['elasticsearch']['cluster']['name'] = 'pelp-search'
 default['elasticsearch']['discovery']['type'] = 'ec2'
+default['elasticsearch']['discovery']['zen']['minimum_master_nodes'] = '1'
 default['elasticsearch']['discovery']['ping']['multicast']['enabled'] = 'false'
-
 default['elasticsearch']['discovery']['ec2']['groups'] = ['pelp-search']
 default['elasticsearch']['logging']['discovery'] = 'TRACE'
 
