@@ -5,9 +5,10 @@ default['java']['oracle']['accept_oracle_download_terms'] = 'true'
 
 default['elasticsearch']['cluster']['name'] = 'pelp-search'
 default['elasticsearch']['discovery']['type'] = 'ec2'
-default['elasticsearch']['discovery']['zen']['minimum_master_nodes'] = '2'
+default['elasticsearch']['discovery']['zen']['minimum_master_nodes'] = '1'
 default['elasticsearch']['discovery']['ping']['multicast']['enabled'] = 'false'
-default['elasticsearch']['discovery']['ec2']['tag']['opsworks:stack'] = 'elasticsearch'
+default['elasticsearch']['discovery']['ec2']['groups'] = 'elasticsearch'
+
 default['elasticsearch']['elasticsearch']['Type'] = 'AWS::EC2::SecurityGroup'
 default['elasticsearch']['elasticsearch']['Properties']['GroupDescription'] = 'so that ES cluster can find other nodes'
 default['elasticsearch']['cloud']['aws']['region'] = 'eu-west'
